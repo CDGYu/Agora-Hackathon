@@ -1,9 +1,22 @@
-# web-design-guidelines
+Web Interface Guidelines
+Review files for compliance with Web Interface Guidelines.
 
-Skill: enforce web design baselines.
+How It Works
+Fetch the latest guidelines from the source URL below
+Read the specified files (or prompt user for files/pattern)
+Check against all rules in the fetched guidelines
+Output findings in the terse file:line format
+Guidelines Source
+Fetch fresh guidelines before each review:
 
-## When to use
-Reviewing any user-facing web surface.
+https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md
+Use WebFetch to retrieve the latest rules. The fetched content contains all the rules and output format instructions.
 
-## Core idea
-Accessibility, performance, responsive behavior, and dark-mode parity are baseline — not stretch goals. Lighthouse and axe are the bar to clear, not the ceiling to aim for.
+Usage
+When a user provides a file or pattern argument:
+
+Fetch guidelines from the source URL above
+Read the specified files
+Apply all rules from the fetched guidelines
+Output findings using the format specified in the guidelines
+If no files specified, ask the user which files to review.
